@@ -1,0 +1,11 @@
+#! /bin/bash
+build() {
+    VERSION=$(git describe --tags --always --abbrev=0)
+    npm install
+    npm run build
+    docker build -t rulex-doc:${VERSION:30:40} .
+}
+#-------------------------------
+# Main
+#-------------------------------
+build

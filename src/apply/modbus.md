@@ -1,0 +1,115 @@
+---
+title: MODBUS 数据采集
+---
+## 案例展示
+下面我们展示一个Modbus使用案例。
+
+```go
+package test
+
+import (
+	"context"
+	"os"
+	"os/signal"
+	"rulex/core"
+	"rulex/engine"
+	"rulex/plugin/demo_plugin"
+	httpserver "rulex/plugin/http_server"
+	"rulex/rulexrpc"
+	"rulex/typex"
+	"syscall"
+	"testing"
+	"time"
+
+	"github.com/ngaut/log"
+	"google.golang.org/grpc"
+	"google.golang.org/grpc/credentials/insecure"
+)
+
+func Test_Modbus_LUA_Parse(t *testing.T) {
+	c := make(chan os.Signal, 1)
+	signal.Notify(c, syscall.SIGINT, syscall.SIGABRT)
+	engine := engine.NewRuleEngine(core.InitGlobalConfig("conf/rulex.ini"))
+	engine.Start()
+	hh := httpserver.NewHttpApiServer(2580, "./rulex.db", engine)
+	// HttpApiServer loaded default
+	if err := engine.LoadPlugin("plugin.http_server", hh); err != nil {
+		log.Fatal("Rule load failed:", err)
+	}
+	// Load a demo plugin
+	if err := engine.LoadPlugin("plugin.demo", demo_plugin.NewDemoPlugin()); err != nil {
+		log.Error("Rule load failed:", err)
+	}
+	// Grpc Inend
+	grpcInend := typex.NewInEnd("GRPC", "Rulex Grpc InEnd", "Rulex Grpc InEnd", map[string]interface{}{
+		"port": 2581,
+	})
+
+	if err := engine.LoadInEnd(grpcInend); err != nil {
+		log.Error("Rule load failed:", err)
+	}
+
+	rule := typex.NewRule(engine,
+		"uuid",
+		"Just a test",
+		"Just a test",
+		[]string{grpcInend.UUID},
+		`function Success() print("[LUA Success Callback]=> OK") end`,
+		`
+		Actions = {
+			function(data)
+			    print(data)
+				local json = require("json")
+				local V6 = json.decode(data)
+				local V7 = json.encode(rulexlib:MB(">a:16 b:8 c:8", data, false))
+				-- {"a":"0000000000000001","b":"00000000","c":"00000001"}
+				print("[LUA Actions Callback, rulex.MatchBinary] ==>", V7)
+				return true, data
+			end
+		}`,
+		`function Failed(error) print("[LUA Failed Callback]", error) end`)
+	if err := engine.LoadRule(rule); err != nil {
+		log.Error(err)
+	}
+	conn, err := grpc.Dial("127.0.0.1:2581", grpc.WithTransportCredentials(insecure.NewCredentials()))
+	if err != nil {
+		log.Error("grpc.Dial err: %v", err)
+	}
+	defer conn.Close()
+	client := rulexrpc.NewRulexRpcClient(conn)
+
+	resp, err := client.Work(context.Background(), &rulexrpc.Data{
+		// lua 输出 {"a":"0000000000000001","b":"00000000","c":"00000001"}
+		Value: string([]byte{0, 1, 0, 1}),
+	})
+	if err != nil {
+		log.Error("grpc.Dial err: %v", err)
+	}
+	log.Infof("Rulex Rpc Call Result ====>>: %v", resp.GetMessage())
+
+	time.Sleep(1 * time.Second)
+	engine.Stop()
+}
+
+```
+
+
+模拟数据:
+```go
+[]byte{0, 1, 0, 1}
+```
+
+其中数据编解码处理使用LUA：
+```go
+Actions = {
+	function(data)
+	    print(data)
+		local json = require("json")
+		local V6 = json.decode(data)
+		local V7 = json.encode(rulexlib:MB(">a:16 b:8 c:8", data, false))
+		-- {"a":"0000000000000001","b":"00000000","c":"00000001"}
+		print("[LUA Actions Callback, rulex.MatchBinary] ==>", V7)
+		return true, data
+	end
+}
+```

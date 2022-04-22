@@ -1,0 +1,35 @@
+name: Deploy
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: ['lts/Fermium']
+    steps:
+      - name: Checkout
+        uses: actions/checkout@main
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+        env:
+          TZ: Asia/Shanghai
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@main
+        with:
+          node-version:  ${{ matrix.node }}
+      - name: Install dependencies
+        run: npm install
+      - name: Build VuePress
+        run: npm run build
+      # - name: Deploy to GitHub Pages
+      #   uses: JamesIves/github-pages-deploy-action@4.1.4
+      #   with:
+      #     git-config-name: github-actions[bot]
+      #     git-config-email: github-actions[bot]@users.noreply.github.com
+      #     branch: gh-pages
+      #     token: ${{ github.RULEX_DOC_CI }}
+      #     folder: src/.vuepress/dist
