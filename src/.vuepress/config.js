@@ -13,7 +13,7 @@ module.exports = {
   ],
   theme: require.resolve('../../packages/@qcyblm/vuepress-theme-vpx'),
   themeConfig: {
-    logo: '/assets/img/logo.png',
+    logo: '/assets/img/logo/Group.png',
     BackToTop: true,
     nav: [
       { text: '首页', link: '/' },
@@ -24,7 +24,7 @@ module.exports = {
         text: 'RULEX生态',
         items: [
           { text: 'RULEX边缘网关', link: '/ecosystem/index.html' },
-          { text: 'Ithings设备平台', link: 'https://github.com/i4de/things' },
+          { text: 'Ithings设备平台', link: 'https://github.com/i4de/ithings' },
           { text: 'IoT Kit 套件', link: '/' }
         ]
       },
