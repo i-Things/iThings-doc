@@ -44,17 +44,6 @@ module.exports = {
           title: "1.0 文档",
           collapsable: false,
           children: [
-            '/V10/1-source.html',
-            '/V10/2-target.html',
-            '/V10/3-rule.html',
-            '/V10/4-plugin.html',
-            '/V10/5-driver.html',
-            '/V10/6-hook.html',
-            '/V10/7-stdlib.html',
-            '/V10/8-iThingsui.html',
-            '/V10/9-models.html',
-            '/V10/10-daemon.html',
-            '/V10/11-debug.html',
           ]
         },
       ],
@@ -80,7 +69,7 @@ module.exports = {
           children: [
             // '/ecosystem/things_broker.html',
             // '/ecosystem/iabus.html',
-            '/ecosystem/ilex.html',
+           // '/ecosystem/ilex.html',
           ]
         },
       ],
