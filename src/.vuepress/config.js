@@ -84,7 +84,7 @@ module.exports = {
     editLinkText: '编辑当前页',
     edit: {
       docsPlatform: 'https://github.com/',
-      docsRepo: 'i4de/ithings-doc/blob',
+      docsRepo: 'i4de/ithings-doc',
       docsBranch: 'master',
       docsDir: 'src',
     },
