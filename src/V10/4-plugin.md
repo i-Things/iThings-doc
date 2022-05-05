@@ -2,7 +2,7 @@
 title: 4-插件设计
 ---
 ## 插件概述
-插件是用来扩展RULEX本身不具备的功能的，比如你可以外挂一个MQTT服务器，此时RULEX框架本来没有MQTT功能，但是经过插件加持，就可以支持MQTT设备接入。
+插件是用来扩展iThings本身不具备的功能的，比如你可以外挂一个MQTT服务器，此时iThings框架本来没有MQTT功能，但是经过插件加持，就可以支持MQTT设备接入。
 ## 编程接口
 ```go
 type XPlugin interface {
@@ -32,13 +32,13 @@ package mqttserver
 import (
 	"fmt"
 	"gopkg.in/ini.v1"
-	"rulex/utils"
+	"iThings/utils"
 
 	mqttServer "github.com/mochi-co/mqtt/server"
 	"github.com/mochi-co/mqtt/server/events"
 	"github.com/mochi-co/mqtt/server/listeners"
 	"github.com/ngaut/log"
-	"rulex/typex"
+	"iThings/typex"
 )
 
 const (

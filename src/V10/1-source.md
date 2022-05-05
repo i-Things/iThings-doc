@@ -2,7 +2,7 @@
 title: 1-数据资源
 ---
 ## 源概念
-在 RULEX 框架内，将所有的入口数据抽象为“源”，也就是Source。
+在 iThings 框架内，将所有的入口数据抽象为“源”，也就是Source。
 
 ## 编程接口
 自定义源只需要实现 `XSource` 接口即可：
@@ -81,9 +81,9 @@ import (
 	"context"
 	"fmt"
 	"net/http"
-	"rulex/core"
-	"rulex/typex"
-	"rulex/utils"
+	"iThings/core"
+	"iThings/typex"
+	"iThings/utils"
 
 	"github.com/gin-gonic/gin"
 	"github.com/ngaut/log"
@@ -101,7 +101,7 @@ type httpInEndSource struct {
 	engine *gin.Engine
 }
 
-func NewHttpInEndSource(inEndId string, e typex.RuleX) typex.XSource {
+func NewHttpInEndSource(inEndId string, e typex.iThings) typex.XSource {
 	h := httpInEndSource{}
 	h.PointId = inEndId
 	gin.SetMode(gin.ReleaseMode)

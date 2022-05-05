@@ -70,9 +70,9 @@ package target
 
 import (
 	"net/http"
-	"rulex/core"
-	"rulex/typex"
-	"rulex/utils"
+	"iThings/core"
+	"iThings/typex"
+	"iThings/utils"
 
 	"github.com/ngaut/log"
 )
@@ -88,7 +88,7 @@ type HTTPTarget struct {
 	client  http.Client
 }
 
-func NewHTTPTarget(e typex.RuleX) typex.XTarget {
+func NewHTTPTarget(e typex.iThings) typex.XTarget {
 	ht := new(HTTPTarget)
 	ht.RuleEngine = e
 	return ht

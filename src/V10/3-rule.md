@@ -2,7 +2,7 @@
 title: 3-数据规则
 ---
 ## 规则概述
-规则是 RULEX 的一个核心功能，即自定义数据处理逻辑和过程，在RULEX 里面我们使用 LUA 编程语言来描述规则。
+规则是 iThings 的一个核心功能，即自定义数据处理逻辑和过程，在iThings 里面我们使用 LUA 编程语言来描述规则。
 
 ## 编程接口
 规则的编程接口为 `typex.Rule`：
@@ -58,17 +58,17 @@ NewRule(engine,
 	`
 	Actions = {
 		function(data)
-			local V0 = rulexlib:MB(">a:16 b:16 c:16 d:16 e:16", data, false)
-			local a = rulexlib:T2J(V0['a'])
-			local b = rulexlib:T2J(V0['b'])
-			local c = rulexlib:T2J(V0['c'])
-			local d = rulexlib:T2J(V0['d'])
-			local e = rulexlib:T2J(V0['e'])
-			print('a ==> ', a, ' ->', rulexlib:BS2B(a), '==> ', rulexlib:B2I64('>', rulexlib:BS2B(a)))
-			print('b ==> ', b, ' ->', rulexlib:BS2B(a), '==> ', rulexlib:B2I64('>', rulexlib:BS2B(b)))
-			print('c ==> ', c, ' ->', rulexlib:BS2B(a), '==> ', rulexlib:B2I64('>', rulexlib:BS2B(c)))
-			print('d ==> ', d, ' ->', rulexlib:BS2B(a), '==> ', rulexlib:B2I64('>', rulexlib:BS2B(d)))
-			print('e ==> ', e, ' ->', rulexlib:BS2B(a), '==> ', rulexlib:B2I64('>', rulexlib:BS2B(e)))
+			local V0 = iThingslib:MB(">a:16 b:16 c:16 d:16 e:16", data, false)
+			local a = iThingslib:T2J(V0['a'])
+			local b = iThingslib:T2J(V0['b'])
+			local c = iThingslib:T2J(V0['c'])
+			local d = iThingslib:T2J(V0['d'])
+			local e = iThingslib:T2J(V0['e'])
+			print('a ==> ', a, ' ->', iThingslib:BS2B(a), '==> ', iThingslib:B2I64('>', iThingslib:BS2B(a)))
+			print('b ==> ', b, ' ->', iThingslib:BS2B(a), '==> ', iThingslib:B2I64('>', iThingslib:BS2B(b)))
+			print('c ==> ', c, ' ->', iThingslib:BS2B(a), '==> ', iThingslib:B2I64('>', iThingslib:BS2B(c)))
+			print('d ==> ', d, ' ->', iThingslib:BS2B(a), '==> ', iThingslib:B2I64('>', iThingslib:BS2B(d)))
+			print('e ==> ', e, ' ->', iThingslib:BS2B(a), '==> ', iThingslib:B2I64('>', iThingslib:BS2B(e)))
 			return true, data
 		end
 	}`,

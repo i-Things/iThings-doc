@@ -13,13 +13,13 @@ title: 11-调试工具
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Debug Rulex",
+            "name": "Debug iThings",
             "type": "go",
             "request": "launch",
             "mode": "auto",
             "program": "${workspaceFolder}/main.go",
             "args": [
-                "run","-config=conf/rulex.ini"
+                "run","-config=conf/iThings.ini"
             ]
         }
     ]

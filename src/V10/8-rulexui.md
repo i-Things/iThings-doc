@@ -3,7 +3,7 @@ title: 8-UI渲染
 ---
 ## UI概述
 我们每个资源都有一些配置，比如MQTT，会有用户名密码，主机IP和端口等，而我们创建这些资源需要在前端界面填一些字段表单，最简单的做法就是每个资源做一个界面。但是随之而来的问题是资源很多，但是貌似只有配置不一样，我们何不用一个渲染规则来生成界面，而不是每个资源都让前端来实现？于是就有了这个设计。
-<img src="/assets/rulexui.png" style="width:100%;height:50%;box-shadow: 20px 20px 50px grey;border-radius: 10px;"></img>
+<img src="/assets/iThingsui.png" style="width:100%;height:50%;box-shadow: 20px 20px 50px grey;border-radius: 10px;"></img>
 
 实际上技术很简单，就是个很普通的表单生成器，但是解决了前端重复造轮子的问题，还是挺好玩的。
 

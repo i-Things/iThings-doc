@@ -2,9 +2,9 @@
 home: true
 heroImage: /assets/img/logo/Group.png
 heroText: 'iThings'
-tagline: 'iThings是一个依照腾讯云物联网平台打造的,物模型与协议格式一致,可以无缝迁移的轻量级物联网微服务平台.'
+tagline: 'iThings是一个基于golang开发的轻量级云原生微服务物联网平台.'
 # notice 是网站首页的通知
-# notice: RULEX V0.1.1发布啦, 新增RCP编解码支持，欢迎体验.
+# notice: IThings V0.0.1发布啦, 完成新版第三方组件切换.
 action:
 - text: 快速上手 →
   link: /quickstart/index.html
@@ -13,10 +13,10 @@ action:
 features:
 - title: 轻量级
   desc: 整套框架全部使用 Golang 开发，不依赖其他静态或者动态库，直接运行原生应用
-- title: 云原生,微服务
+- title: 云原生
   desc: 使用go-zero开发易拓展,一键部署,选用轻量高性能第三方组件:nats,redis,emqx,etcd,tdengine
-- title: 易迁移
-  desc: 脱胎于腾讯云物联网平台,物模型与协议完全一致,轻松切换
+- title: 易拓展
+  desc:  支持单机及微服务的部署方式,后续支持单机模式直接调用
 
 footerWrap:
 - title: 交流社区

@@ -2,7 +2,7 @@
 title: 5-驱动设计 
 ---
 ## 驱动概述
-在 RULEX 里面，驱动指的是桥接外部设备的组件，比如串口，或者USB口等。
+在 iThings 里面，驱动指的是桥接外部设备的组件，比如串口，或者USB口等。
 
 ## 编程接口
 ```go
@@ -38,7 +38,7 @@ type XExternalDriver interface {
 package driver
 
 import (
-	"rulex/typex"
+	"iThings/typex"
 
 	"github.com/goburrow/modbus"
 )
@@ -52,12 +52,12 @@ type modBusRtuDriver struct {
 	state      typex.DriverState
 	client     modbus.Client
 	In         *typex.InEnd
-	RuleEngine typex.RuleX
+	RuleEngine typex.iThings
 }
 
 func NewModBusRtuDriver(
 	in *typex.InEnd,
-	e typex.RuleX,
+	e typex.iThings,
 	client modbus.Client) typex.XExternalDriver {
 	return &modBusRtuDriver{
 		state:      typex.RUNNING,

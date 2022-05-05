@@ -6,8 +6,8 @@ module.exports = {
       lang: 'zh-CN',
     }
   },
-  title: 'RULEX',
-  description: 'RULEX是一个轻量级物联网边缘网关开发框架',
+  title: 'iThings',
+  description: 'iThings是一个轻量级物联网边缘网关开发框架',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
@@ -18,14 +18,12 @@ module.exports = {
     nav: [
       { text: '首页', link: '/' },
       { text: '快速上手', link: '/quickstart/index.html' },
-      { text: 'V1.0文档', link: '/V10/index.html' },
+      // { text: 'V1.0文档', link: '/V10/index.html' },
       { text: '案例应用', link: '/apply/index.html' },
       {
-        text: 'RULEX生态',
+        text: 'iThings生态',
         items: [
-          { text: 'RULEX边缘网关', link: '/ecosystem/index.html' },
-          { text: 'Ithings设备平台', link: 'https://github.com/i4de/ithings' },
-          { text: 'IoT Kit 套件', link: '/' }
+          { text: 'iThings边缘网关', link: 'https://iThings.pages.dev' },
         ]
       },
     ],
@@ -35,10 +33,9 @@ module.exports = {
           title: "快速开始",
           collapsable: false,
           children: [
-            '/quickstart/download.html',
-            '/quickstart/compile.html',
-            '/quickstart/docker.html',
-            '/quickstart/cli.html',
+            '/quickstart/安装教程.html',
+            '/quickstart/服务简介.html',
+            '/quickstart/应用场景.html',
           ]
         },
       ],
@@ -54,7 +51,7 @@ module.exports = {
             '/V10/5-driver.html',
             '/V10/6-hook.html',
             '/V10/7-stdlib.html',
-            '/V10/8-rulexui.html',
+            '/V10/8-iThingsui.html',
             '/V10/9-models.html',
             '/V10/10-daemon.html',
             '/V10/11-debug.html',
@@ -66,8 +63,7 @@ module.exports = {
           title: "行业应用",
           collapsable: false,
           children: [
-            '/apply/modbus.html',
-            '/apply/simens.html',
+            '/apply/宠物定位项圈.html',
           ]
         },
       ],
@@ -79,7 +75,7 @@ module.exports = {
       ],
       '/ecosystem/': [
         {
-          title: "RULEX生态",
+          title: "iThings生态",
           collapsable: false,
           children: [
             // '/ecosystem/things_broker.html',
@@ -93,28 +89,22 @@ module.exports = {
       platform: 'https://github.com/',
       icon: 'fab fa-github',
       owner: 'i4de',
-      repositories: 'rulex',
+      repositories: 'iThings',
     },
     editLinks: true,
     editLinkText: '编辑当前页',
     edit: {
       docsPlatform: 'https://github.com/',
-      docsRepo: 'i4de/rulex',
+      docsRepo: 'i4de/ithings',
       docsBranch: 'master',
       docsDir: 'src',
     },
     footer: {
-      licensedLink: 'https://github.com/i4de/rulex/blob/master/LICENSE',
-      licensed: 'GPL2',
+      licensedLink: 'https://github.com/i4de/ithings/blob/master/LICENSE',
+      licensed: 'GNU',
       createYear: '2022',
-      author: 'RULEX',
-      authorLink: 'https://github.com/i4de/rulex',
-      copyright: [
-        {
-          text: '个人主页',
-          link: 'https://wwhai.github.io/'
-        }
-      ]
+      author: 'iThings',
+      authorLink: 'https://github.com/i4de/ithings',
     }
   },
   plugins: [
