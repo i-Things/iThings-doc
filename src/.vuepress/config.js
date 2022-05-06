@@ -39,6 +39,29 @@ module.exports = {
             '/iThings/快速开始/安装教程.md',
           ]
         },
+        {
+          title: "开发中心",
+          collapsable: true,
+          children: [
+            '/iThings/开发中心/项目管理.md',
+            '/iThings/开发中心/产品开发.md',
+          ]
+        },
+        {
+          title: "云端开发指南",
+          collapsable: true,
+          children: [
+            '/iThings/云端开发指南/设备身份认证.md',
+            '/iThings/云端开发指南/物模型协议.md',
+          ]
+        },
+        {
+          title: "api文档",
+          collapsable: false,
+          children: [
+            '/iThings/api文档/文档地址.md',
+          ]
+        },
       ],
       '/apply/': [
         {
