@@ -17,33 +17,26 @@ module.exports = {
     BackToTop: true,
     nav: [
       { text: '首页', link: '/' },
-      { text: '快速上手', link: '/quickstart/index.html' },
+      { text: '使用文档', link: '/iThings/index.md' },
       // { text: 'V1.0文档', link: '/V10/index.html' },
-      { text: '案例应用', link: '/apply/index.html' },
-      {
-        text: 'iThings生态',
-        items: [
-          { text: 'iThings边缘网关', link: 'https://iThings.pages.dev' },
-        ]
-      },
+      { text: '案例应用', link: '/apply/index.md' },
     ],
     sidebar: {
-      '/quickstart/': [
+      '/iThings/': [
         {
-          title: "快速开始",
-          collapsable: false,
+          title: "iThings简介",
+          collapsable: true,
           children: [
-            '/quickstart/安装教程.html',
-            '/quickstart/服务简介.html',
-            '/quickstart/应用场景.html',
+            '/iThings/iThings简介/iThings简介.md',
+            '/iThings/iThings简介/服务简介.md',
+            '/iThings/iThings简介/应用场景.md',
           ]
         },
-      ],
-      '/V10/': [
         {
-          title: "1.0 文档",
-          collapsable: false,
+          title: "快速开始",
+          collapsable: true,
           children: [
+            '/iThings/快速开始/安装教程.md',
           ]
         },
       ],
@@ -52,24 +45,7 @@ module.exports = {
           title: "行业应用",
           collapsable: false,
           children: [
-            '/apply/宠物定位项圈.html',
-          ]
-        },
-      ],
-      '/product/': [
-        {
-          title: "自研产品",
-          collapsable: false,
-        },
-      ],
-      '/ecosystem/': [
-        {
-          title: "iThings生态",
-          collapsable: false,
-          children: [
-            // '/ecosystem/things_broker.html',
-            // '/ecosystem/iabus.html',
-           // '/ecosystem/ilex.html',
+            '/apply/宠物定位项圈.md',
           ]
         },
       ],

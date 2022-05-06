@@ -11,12 +11,12 @@ action:
 
 
 features:
-- title: 轻量级
-  desc: 整套框架全部使用 Golang 开发，不依赖其他静态或者动态库，直接运行原生应用
+- title: 易部署 
+  desc: 一键安装所有依赖,一键运行iThings
 - title: 云原生
   desc: 使用go-zero开发易拓展,一键部署,选用轻量高性能第三方组件:nats,redis,emqx,etcd,tdengine
 - title: 易拓展
-  desc:  支持单机及微服务的部署方式,后续支持单机模式直接调用
+  desc:  原生支持微服务部署,避免只支持集群模式后期难以拓展的尴尬
 
 footerWrap:
 - title: 交流社区
