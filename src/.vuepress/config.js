@@ -17,8 +17,7 @@ module.exports = {
     BackToTop: true,
     nav: [
       { text: '首页', link: '/' },
-      { text: '使用文档', link: '/iThings/index.md' },
-      // { text: 'V1.0文档', link: '/V10/index.html' },
+      { text: '使用文档', link: '/iThings/iThings简介/iThings简介.md' },
       { text: '案例应用', link: '/apply/index.md' },
     ],
     sidebar: {
