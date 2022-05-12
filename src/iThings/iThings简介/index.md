@@ -34,7 +34,7 @@ iThings是一个基于golang开发的轻量级云原生微服务物联网平台.
 
 ## 社区
 - 微信: `godLei6` (需备注“来自github”)
-- 官网:[https://ithings.github.io](https://ithings.github.io)
+- 官网:[https://ithings.pages.dev](https://ithings.pages.dev)
 
 ## Star
 <img src="https://starchart.cc/i4de/ithings.svg">
