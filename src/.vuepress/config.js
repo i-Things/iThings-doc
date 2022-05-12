@@ -19,6 +19,7 @@ module.exports = {
       { text: '首页', link: '/' },
       { text: '使用文档', link: '/iThings/iThings简介/iThings简介.md' },
       { text: '案例应用', link: '/apply/index.md' },
+      { text: '在线体验', link: 'http://42.193.250.251:8888/' },
     ],
     sidebar: {
       '/iThings/': [
