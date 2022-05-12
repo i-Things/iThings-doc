@@ -1,9 +1,10 @@
-# RULEX Document page
+# iThings Document page
 ## 源码构建
 ```bash
-npm install
-num run dev
-num run build
+npm install --global yarn
+yarn install
+yarn run dev
+yarn run build
 ```
 ## Docker 发布
 ```bash
@@ -33,6 +34,6 @@ bash ./build
    在markdown文档加上特殊标识`title`即可
     ```
     ---
-    title: 物联网网关
+    title: 物联网平台
     ---
     ```
