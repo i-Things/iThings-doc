@@ -7,7 +7,7 @@ tagline: 'iThings是一个基于golang开发的轻量级云原生微服务物联
 # notice: IThings V0.0.1发布啦, 完成新版第三方组件切换.
 action:
 - text: 快速上手 →
-  link: /quickstart/index.html
+  link: /iThings/iThings简介/iThings简介.html
 
 
 features:

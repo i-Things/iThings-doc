@@ -43,8 +43,9 @@ module.exports = {
           title: "开发中心",
           collapsable: true,
           children: [
-            '/iThings/开发中心/项目管理.md',
+            // '/iThings/开发中心/项目管理.md',
             '/iThings/开发中心/产品开发.md',
+            '/iThings/开发中心/设备接入指引.md',
           ]
         },
         {
