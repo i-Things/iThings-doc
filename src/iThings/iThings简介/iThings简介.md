@@ -62,7 +62,19 @@ iThings物联网平台提供跨不同设备和数据源的通用接入及管理�
 1. 用于构建用户界面的 JavaScript 库:[react](https://reactjs.org/)
 2. 企业级设计组件:[ant design](https://ant.design/)
 3. 一套高质量可靠的 React Hooks库:[ahooks](https://ahooks.js.org/)
-   
+
+## 贡献者
+感谢所有已经做出贡献的人!
+### 后端
+<a href="https://github.com/i4de/iThings/graphs/contributors">
+  <img src="https://contributors-img.web.app/image?repo=i4de/iThings" />
+</a>
+
+### 前端
+<a href="https://github.com/i4de/iThings-admin-react/graphs/contributors">
+  <img src="https://contributors-img.web.app/image?repo=i4de/iThings-admin-react" />
+</a>
+
 ## 社区
 - 微信: `godLei6` (需备注“来自github”)
 - 官网:[https://ithings.pages.dev/](https://ithings.pages.dev/)

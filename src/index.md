@@ -37,6 +37,26 @@ footerWrap:
 2. 支持单体模式
 3. 接口规范化
 
+## 贡献者
+感谢所有已经做出贡献的人!
+### 后端
+<a href="https://github.com/i4de/iThings/graphs/contributors">
+  <img src="https://contributors-img.web.app/image?repo=i4de/iThings" />
+</a>
+
+### 前端
+<a href="https://github.com/i4de/iThings-admin-react/graphs/contributors">
+  <img src="https://contributors-img.web.app/image?repo=i4de/iThings-admin-react" />
+</a>
+
+## 社区
+- 微信: `godLei6` (需备注“来自github”)
+- 微信二维码:
+- <img src="/assets/img/things/微信二维码2.jpg">
+
+## 收藏
+<img src="https://starchart.cc/i4de/ithings.svg">
+
 ::: info
 如需关注最新版本变化，请移步：https://github.com/i4de/ithings
 :::
