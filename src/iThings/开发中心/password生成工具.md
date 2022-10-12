@@ -1,0 +1,150 @@
+# password 生成工具
+
+<div class="content">
+    <h3>请输入设备信息：</h3>
+    <div>
+        <span for="">ProductID:</span>
+        <input type="text" id="productid" name="productid" v-model="productid"></input>
+    </div>
+    <div>
+        <span for="">DeviceName:</span>
+        <input type="text" id="devicename" name="devicename" v-model="devicename"></input>
+    </div>
+    <div>
+        <span for="">DeviceSceret:</span>
+        <input type="text" id="devicesecret" name="devicesecret" v-model="devicesecret"></input>
+    </div>
+    <div>
+        <span for="">Hmac签名算法:</span>
+        <select id="signmethod" name="signmethod" v-model="signmethod">
+            <option value="HMAC-SHA1">HMAC-SHA1</option>
+            <option value="HMAC-SHA256" selected>HMAC-SHA256</option>
+        </select>
+    </div>
+    <button id="submit" name="submit" v-on:click="onSign()">Generate</button>
+    <br />
+    <h3>结果：</h3>
+    <div>
+        <span for="">UserName:</span>
+        <input type="text" id="calculatedusername" name="calculatedusername" v-model="calculatedusername"></input>
+    </div>
+    <div>
+        <span for="">Password:</span>
+        <input type="text" id="calculatedpassword" name="calculatedpassword" v-model="calculatedusername"></input>
+    </div>
+</div>
+  
+<script type="module">
+import CryptoJS from "../../.vuepress/public/assets/js/crypto-js.min.js"
+export default {
+    data() {
+        return {
+            productid: "",
+            devicename: "",
+            devicesecret: "",
+            signmethod: "",
+            calculatedusername: "",
+            calculatedusername: "",
+        }
+    },
+    mounted () {
+    },
+    methods:  {
+        onSign(){
+            if (this.productid === '' || this.devicename === '' || this.devicesecret === '' || this.signmethod === '') {
+                alert("必填项不能为空");
+                return;
+            }
+            let connid = this.randomString(5);
+            let expiry = Math.floor(Date.now() / 1000) + 60 * 60 * 24 * 127;
+            let clientid = productid + devicename;
+            let username = clientid + ';' + '12010126' + ';' + connid + ';' + expiry;
+            let token = '';
+            let password = '';
+            if (this.signmethod === 'HMAC-SHA1') {
+                token = CryptoJS.HmacSHA1(username, CryptoJS.enc.Base64.parse(this.devicesecret))
+                password = token + ';' + 'hmacsha1'
+            } else {
+                token = CryptoJS.HmacSHA256(username, CryptoJS.enc.Base64.parse(this.devicesecret))
+                password = token + ';' + 'hmacsha256'
+            }
+            this.calculatedusername = username;
+            this.calculatedpassword = password;
+
+        },
+        randomString(len, charSet) {
+            charSet = charSet || 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+            let randomString = '';
+            let randomPoz = ''
+            for (var i = 0; i < len; i++) {
+                randomPoz = Math.floor(Math.random() * charSet.length);
+                randomString += charSet.substring(randomPoz, randomPoz + 1);
+            }
+            return randomString;
+        }
+    }
+
+}
+</script>
+
+<style scoped>
+.content {
+    margin: 30px 0 0 0px;
+}
+.content div {
+    margin: 20px 0;
+}
+h3 {
+    margin-bottom: 30px;
+}
+span {
+    width: 150px;
+    text-align: right;
+    display: inline-block;
+    margin-right: 10px;
+}
+input,
+select {
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: middle;
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 12px;
+    border: 1px solid #ddd;
+    border-radius: 0;
+    color: #444;
+    transition: .2s ease-in-out;
+    transition-property: color, background-color, border;
+    width: 420px;
+}
+option {
+    background: #A6E1EC;
+}
+input:hover,
+input:focus,
+select:hover,
+select:focus {
+    border: #006eff 1px solid;
+    outline: none;
+}
+button {
+    margin-left: 225px;
+    height: 36px;
+    padding: 0 58px;
+    background-color: #006eff;
+    color: #fff;
+    border: 1px solid #006eff;
+    line-height: 30px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    outline: 0 none;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-size: 12px;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+</style>

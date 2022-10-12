@@ -48,6 +48,7 @@ module.exports = {
             // '/iThings/开发中心/项目管理.md',
             '/iThings/开发中心/产品开发.md',
             '/iThings/开发中心/设备接入指引.md',
+            '/iThings/开发中心/password生成工具.md',
           ]
         },
         {
