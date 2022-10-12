@@ -57,13 +57,7 @@ module.exports = {
           children: [
             '/iThings/云端开发指南/设备身份认证.md',
             '/iThings/云端开发指南/物模型协议.md',
-          ]
-        },
-        {
-          title: "api文档",
-          collapsable: false,
-          children: [
-            '/iThings/api文档/文档地址.md',
+            '/iThings/云端开发指南/文档地址.md',
           ]
         },
       ],
