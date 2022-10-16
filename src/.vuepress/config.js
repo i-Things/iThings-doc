@@ -18,7 +18,6 @@ module.exports = {
     nav: [
       { text: '首页', link: '/' },
       { text: '使用文档', link: '/iThings/iThings简介/iThings简介.md' },
-      { text: '案例应用', link: '/apply/index.md' },
       { text: '在线体验', link: 'http://42.193.250.251:8888/' },
       { text: '边缘网关', link: 'https://rulex.pages.dev/' },
     ],
@@ -48,7 +47,6 @@ module.exports = {
             // '/iThings/开发中心/项目管理.md',
             '/iThings/开发中心/产品开发.md',
             '/iThings/开发中心/设备接入指引.md',
-            '/iThings/开发中心/password生成工具.md',
           ]
         },
         {
@@ -56,6 +54,7 @@ module.exports = {
           collapsable: true,
           children: [
             '/iThings/云端开发指南/设备身份认证.md',
+            '/iThings/云端开发指南/password生成工具.md',
             '/iThings/云端开发指南/物模型协议.md',
             '/iThings/云端开发指南/文档地址.md',
           ]

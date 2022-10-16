@@ -1,17 +1,17 @@
-# password 生成工具
+# 设备密码生成
 
 <div class="content">
     <h3>请输入设备信息：</h3>
     <div>
-        <span for="">ProductID:</span>
+        <span for="">产品ID:</span>
         <input type="text" id="productid" name="productid" v-model="productid"></input>
     </div>
     <div>
-        <span for="">DeviceName:</span>
+        <span for="">设备名:</span>
         <input type="text" id="devicename" name="devicename" v-model="devicename"></input>
     </div>
     <div>
-        <span for="">DeviceSceret:</span>
+        <span for="">设备秘钥:</span>
         <input type="text" id="devicesecret" name="devicesecret" v-model="devicesecret"></input>
     </div>
     <div>
@@ -21,21 +21,25 @@
             <option value="HMAC-SHA256" selected>HMAC-SHA256</option>
         </select>
     </div>
-    <button id="submit" name="submit" v-on:click="onSign()">Generate</button>
+    <button id="submit" name="submit" v-on:click="onSign()">生成</button>
     <br />
     <h3>结果：</h3>
     <div>
-        <span for="">UserName:</span>
-        <input type="text" id="calculatedusername" name="calculatedusername" v-model="calculatedusername"></input>
+        <span for="">客户端id:</span>
+        <input type="text" id="calculatedclientid" name="calculatedclientid" v-model="calculatedclientid"/>
     </div>
     <div>
-        <span for="">Password:</span>
-        <input type="text" id="calculatedpassword" name="calculatedpassword" v-model="calculatedusername"></input>
+        <span for="">账号:</span>
+        <input type="text" id="calculatedusername" name="calculatedusername" v-model="calculatedusername"/>
+    </div>
+    <div>
+        <span for="">密码:</span>
+        <input type="text" id="calculatedpassword" name="calculatedpassword" v-model="calculatedusername"/>
     </div>
 </div>
   
 <script type="module">
-import CryptoJS from "../../.vuepress/public/assets/js/crypto-js.min.js"
+import CryptoJS from "../../.vuepress/public/assets/js/crypto-js.min.js";
 export default {
     data() {
         return {
@@ -44,7 +48,8 @@ export default {
             devicesecret: "",
             signmethod: "",
             calculatedusername: "",
-            calculatedusername: "",
+            calculatedpassword: "",
+            calculatedclientid:"",
         }
     },
     mounted () {
@@ -57,25 +62,25 @@ export default {
             }
             let connid = this.randomString(5);
             let expiry = Math.floor(Date.now() / 1000) + 60 * 60 * 24 * 127;
-            let clientid = productid + devicename;
+            let clientid = this.productid + this.devicename;
             let username = clientid + ';' + '12010126' + ';' + connid + ';' + expiry;
             let token = '';
             let password = '';
             if (this.signmethod === 'HMAC-SHA1') {
-                token = CryptoJS.HmacSHA1(username, CryptoJS.enc.Base64.parse(this.devicesecret))
+                token = CryptoJS.HmacSHA1(username, CryptoJS.enc.Base64.parse(this.devicesecret));
                 password = token + ';' + 'hmacsha1'
             } else {
-                token = CryptoJS.HmacSHA256(username, CryptoJS.enc.Base64.parse(this.devicesecret))
+                token = CryptoJS.HmacSHA256(username, CryptoJS.enc.Base64.parse(this.devicesecret));
                 password = token + ';' + 'hmacsha256'
             }
             this.calculatedusername = username;
             this.calculatedpassword = password;
-
+            this.calculatedclientid = clientid;
         },
         randomString(len, charSet) {
             charSet = charSet || 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
             let randomString = '';
-            let randomPoz = ''
+            let randomPoz = '';
             for (var i = 0; i < len; i++) {
                 randomPoz = Math.floor(Math.random() * charSet.length);
                 randomString += charSet.substring(randomPoz, randomPoz + 1);
