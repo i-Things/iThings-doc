@@ -18,7 +18,7 @@ module.exports = {
     nav: [
       { text: '首页', link: '/' },
       { text: '使用文档', link: '/iThings/iThings简介/iThings简介.md' },
-      { text: '在线体验', link: 'http://42.193.250.251:8888/' },
+      { text: '在线体验', link: 'http://42.193.250.251:7777/' },
       { text: '边缘网关', link: 'https://rulex.pages.dev/' },
     ],
     sidebar: {
