@@ -3,7 +3,7 @@
 iThings是一个基于golang开发的轻量级云原生微服务物联网平台.
 ## 架构
 下图是 iThings 平台的整体架构:
-<img src="/assets/img/things/ithings架构图.png">
+<img src="/assets/img/things/iThings架构图.png">
 ## 目录
 - doc:该项目的文档都放在这里
 - shared:所有该项目及其他项目所公用的代码都放在这里
@@ -35,6 +35,14 @@ iThings是一个基于golang开发的轻量级云原生微服务物联网平台.
 ## 社区
 - 微信: `godLei6` (需备注“来自github”)
 - 官网:[https://ithings.pages.dev](https://ithings.pages.dev)
+
+## Contributors
+
+Thanks to all the people who already contributed!
+
+<a href="https://github.com/i4de/iThings/graphs/contributors">
+  <img src="https://contributors-img.web.app/image?repo=i4de/iThings" />
+</a>
 
 ## Star
 <img src="https://starchart.cc/i4de/ithings.svg">
