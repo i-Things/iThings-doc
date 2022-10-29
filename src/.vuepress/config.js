@@ -59,6 +59,13 @@ module.exports = {
             '/iThings/云端开发指南/文档地址.md',
           ]
         },
+        {
+          title: "设备端开发指南",
+          collapsable: true,
+          children: [
+            '/iThings/设备端开发指南/设备本地日志上报.md',
+          ]
+        },
       ],
       '/apply/': [
         {
