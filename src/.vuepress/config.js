@@ -19,6 +19,7 @@ module.exports = {
       { text: '首页', link: '/' },
       { text: '使用文档', link: '/iThings/iThings简介/iThings简介.md' },
       { text: '在线体验', link: 'http://42.193.250.251:7777/' },
+      {text:'接口文档',link: 'https://www.apifox.cn/apidoc/shared-0fb2272b-5f25-4ce0-90ce-f5bf82958c6d'},
       { text: '边缘网关', link: 'https://rulex.pages.dev/' },
     ],
     sidebar: {
@@ -56,14 +57,14 @@ module.exports = {
             '/iThings/云端开发指南/设备身份认证.md',
             '/iThings/云端开发指南/password生成工具.md',
             '/iThings/云端开发指南/物模型协议.md',
-            '/iThings/云端开发指南/文档地址.md',
+            '/iThings/云端开发指南/网关子设备.md',
+            '/iThings/云端开发指南/设备本地日志上报.md',
           ]
         },
         {
           title: "设备端开发指南",
           collapsable: true,
           children: [
-            '/iThings/设备端开发指南/设备本地日志上报.md',
           ]
         },
       ],
