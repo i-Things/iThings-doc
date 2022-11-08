@@ -34,7 +34,7 @@
     </div>
     <div>
         <span for="">密码:</span>
-        <input type="text" id="calculatedpassword" name="calculatedpassword" v-model="calculatedusername"/>
+        <input type="text" id="calculatedpassword" name="calculatedpassword" v-model="calculatedpassword"/>
     </div>
 </div>
   
@@ -46,7 +46,7 @@ export default {
             productid: "",
             devicename: "",
             devicesecret: "",
-            signmethod: "",
+            signmethod: "HMAC-SHA256",
             calculatedusername: "",
             calculatedpassword: "",
             calculatedclientid:"",
