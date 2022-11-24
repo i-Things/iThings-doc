@@ -59,6 +59,7 @@ module.exports = {
             '/iThings/云端开发指南/物模型协议.md',
             '/iThings/云端开发指南/网关子设备.md',
             '/iThings/云端开发指南/设备本地日志上报.md',
+            '/iThings/云端开发指南/设备远程配置.md',
           ]
         },
         {
