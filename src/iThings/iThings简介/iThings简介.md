@@ -12,7 +12,7 @@ git地址:
 * 后端github地址:[https://github.com/i4de/ithings](https://github.com/i4de/ithings)
 * 后端gitee地址:[https://gitee.com/i-Things/things](https://gitee.com/i-Things/things)
 * 前端github地址:[https://github.com/i4de/iThings-admin-react](https://github.com/i4de/iThings-admin-react)
-
+* 同时支持单体及微服务集成二开样例:[https://github.com/i4de/iThings-demo](https://github.com/i4de/iThings-demo)
 ## 产品架构
 iThings物联网平台提供跨不同设备和数据源的通用接入及管理平台,在整个物联网架构中起到承上启下的中介作用，
 联动感知层及应用层之间的所有交互——向下连接、管理物联网设备端并完成感知数据的归集与存储，
