@@ -30,8 +30,15 @@ module.exports = {
           children: [
             '/iThings/iThings简介/iThings简介.md',
             '/iThings/iThings简介/服务设计.md',
-            '/iThings/iThings简介/应用场景.md',
             '/iThings/iThings简介/iThings主要流程.md',
+            '/iThings/iThings简介/许可版本.md',
+          ]
+        },
+        {
+          title: "应用案例",
+          collapsable: true,
+          children: [
+            '/iThings/应用案例/应用场景.md',
           ]
         },
         {
@@ -59,6 +66,7 @@ module.exports = {
             '/iThings/云端开发指南/物模型协议.md',
             '/iThings/云端开发指南/网关子设备.md',
             '/iThings/云端开发指南/设备本地日志上报.md',
+            '/iThings/云端开发指南/设备远程配置.md',
           ]
         },
         {

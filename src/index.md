@@ -14,9 +14,9 @@ features:
 - title: 易部署 
   desc: 一键安装所有依赖,一键运行iThings
 - title: 云原生易拓展
-  desc: 支持k8s,docker微服务及单体模式部署,便于业务从单体到微服务的切换
-- title: 易拓展
-  desc:  一键安装所有依赖,一键运行iThings
+  desc: 一套代码同时支持k8s,docker,微服务及单体模式部署,便于业务从单体到微服务的切换,可以通过http,grpc,甚至直接将iThings作为包集成进自己系统
+- title: 高性能
+  desc: 使用golang编写,选用高性能组件(emqx,nats,tdengine),基于gozero微服务框架高性能的同时保证服务的稳定性
 
 footerWrap:
 - title: 交流社区
@@ -36,6 +36,11 @@ footerWrap:
 1. 拥有独立的管理后台
 2. 支持单体模式
 3. 接口规范化
+### V0.2.0(2022-11-24)
+1. 新增网关子设备
+2. 新增产品远程配置
+3. 物模型前端完善
+4. bug修复
 
 ## 贡献者
 感谢所有已经做出贡献的人!
@@ -51,6 +56,7 @@ footerWrap:
 
 ## 社区
 - 微信: `godLei6` (需备注“来自github”)
+- 时刻招募相信分布式办公的你
 - 微信二维码:
 - <img src="/assets/img/things/微信二维码2.jpg">
 
