@@ -5,7 +5,7 @@ on:
         branches: [master]
 
 env:
-    cache-name: ithings-admin-react
+    cache-name: ithings-doc
 
 jobs:
     build-deploy:
