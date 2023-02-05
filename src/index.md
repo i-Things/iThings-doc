@@ -41,6 +41,13 @@ footerWrap:
 2. 新增产品远程配置
 3. 物模型前端完善
 4. bug修复
+### V0.3.0(2023-02-06)
+1. 新增首页大屏统计
+2. 前端升级到最新版本umi:4.x react:18.x ant:5.0 
+3. 新增设备地图
+4. 产品支持tag
+5.  <a style="color:black;" href="/iThings/高级/消息推送.html">支持开放接口,支持basic auth,及实时消息推送</a>
+6. <a style="color:black;" href="https://github.com/i4de/iThings-demo">新增二开案例</a> 
 
 ## 贡献者
 感谢所有已经做出贡献的人!
@@ -55,7 +62,8 @@ footerWrap:
 </a>
 
 ## 社区
-- 微信: `godLei6` (需备注“来自github”)
+- 微信(加我拉微信群): `godLei6` (需备注“来自github”)
+- QQ群(需备注“来自github”): <a href="https://jq.qq.com/?_wv=1027&k=1J4ZL7mn">776725046</a>
 - 时刻招募相信分布式办公的你
 - 微信二维码:
 - <img src="/assets/img/things/微信二维码2.jpg">

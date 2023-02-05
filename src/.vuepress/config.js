@@ -75,6 +75,14 @@ module.exports = {
           children: [
           ]
         },
+        {
+          title: "高级",
+          collapsable: true,
+          children: [
+            '/iThings/高级/开放认证.md',
+            '/iThings/高级/消息推送.md',
+          ]
+        },
       ],
       '/apply/': [
         {
