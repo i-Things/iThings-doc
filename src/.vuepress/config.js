@@ -46,17 +46,18 @@ module.exports = {
           collapsable: true,
           children: [
             '/iThings/快速开始/安装教程.md',
+            '/iThings/快速开始/产品开发.md',
+            '/iThings/快速开始/设备接入指引.md',
           ]
         },
-        {
-          title: "开发中心",
-          collapsable: true,
-          children: [
-            // '/iThings/开发中心/项目管理.md',
-            '/iThings/开发中心/产品开发.md',
-            '/iThings/开发中心/设备接入指引.md',
-          ]
-        },
+        // {
+        //   title: "开发中心",
+        //   collapsable: true,
+        //   children: [
+        //     // '/iThings/开发中心/项目管理.md',
+        //
+        //   ]
+        // },
         {
           title: "云端开发指南",
           collapsable: true,
@@ -81,6 +82,13 @@ module.exports = {
           children: [
             '/iThings/高级/开放认证.md',
             '/iThings/高级/消息推送.md',
+          ]
+        },
+        {
+          title: "iThings开发",
+          collapsable: true,
+          children: [
+            '/iThings/iThings开发/单体模式编辑及运行.md',
           ]
         },
       ],
