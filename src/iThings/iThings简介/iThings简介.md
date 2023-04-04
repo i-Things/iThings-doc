@@ -12,6 +12,7 @@ git地址:
 * 后端github地址:[https://github.com/i4de/ithings](https://github.com/i4de/ithings)
 * 后端gitee地址:[https://gitee.com/i-Things/things](https://gitee.com/i-Things/things)
 * 前端github地址:[https://github.com/i4de/iThings-admin-react](https://github.com/i4de/iThings-admin-react)
+* 前端gitee地址:[https://gitee.com/i-Things/iThings-admin-react](https://gitee.com/i-Things/iThings-admin-react)
 * 同时支持单体及微服务集成二开样例:[https://github.com/i4de/iThings-demo](https://github.com/i4de/iThings-demo)
 ## 产品架构
 iThings物联网平台提供跨不同设备和数据源的通用接入及管理平台,在整个物联网架构中起到承上启下的中介作用，
@@ -79,7 +80,7 @@ iThings物联网平台提供跨不同设备和数据源的通用接入及管理�
 
 ## 社区
 - 微信: `godLei6` (需备注“来自github”)
-- 官网:[https://ithings.pages.dev/](https://ithings.pages.dev/)
+- 官网:[https://ithings.net.cn/](https://ithings.net.cn/)
 - 时刻招募相信分布式办公的你
 - 微信二维码:
 - <img src="/assets/img/things/微信二维码2.jpg">
