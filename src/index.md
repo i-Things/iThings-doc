@@ -49,7 +49,7 @@ footerWrap:
 5.  <a style="color:black;" href="/iThings/高级/消息推送.html">支持开放接口,支持basic auth,及实时消息推送</a>
 6. <a style="color:black;" href="https://github.com/i4de/iThings-demo">新增二开案例</a> 
 
-### V0.3.0(2023-03-02)
+### V0.4.0(2023-03-02)
 1. 新增操作日志,登录日志及接口记录 by @oliver-xie666  @lbs0019873800lbs 
 2. 前端界面优化 by @Huhui-coder @oliver-xie666 
 3. [支持emqx5.0](https://github.com/i4de/ithings/pull/167) by@cooclsee
