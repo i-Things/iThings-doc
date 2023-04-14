@@ -68,6 +68,7 @@ module.exports = {
             '/iThings/云端开发指南/网关子设备.md',
             '/iThings/云端开发指南/设备本地日志上报.md',
             '/iThings/云端开发指南/设备远程配置.md',
+            '/iThings/云端开发指南/消息解析.md',
           ]
         },
         {
@@ -75,6 +76,7 @@ module.exports = {
           collapsable: true,
           children: [
             '/iThings/设备端开发指南/开发者指引.md',
+            '/iThings/设备端开发指南/设备基于mqtt协议接入.md',
           ]
         },
         {
