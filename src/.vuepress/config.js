@@ -74,6 +74,7 @@ module.exports = {
           title: "设备端开发指南",
           collapsable: true,
           children: [
+            '/iThings/设备端开发指南/开发者指引.md',
           ]
         },
         {
