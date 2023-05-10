@@ -57,10 +57,10 @@ footerWrap:
 5. 修复若干bug 
 
 ### V0.5.0(2023-05-10)
-1. 新增自定义脚本解析 by @godLei6  @oliver-xie666
-2. 网关加强安全性,需要子设备密码 by  @godLei6 
+1. [新增自定义脚本解析](https://ithings.net.cn/iThings/%E4%BA%91%E7%AB%AF%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/%E6%B6%88%E6%81%AF%E8%A7%A3%E6%9E%90.html#使用方式) by @godLei6  @oliver-xie666
+2. [网关加强安全性,需要子设备密码](https://ithings.net.cn/iThings/%E4%BA%91%E7%AB%AF%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/%E7%BD%91%E5%85%B3%E5%AD%90%E8%AE%BE%E5%A4%87.html#功能概述) by  @godLei6 
 3. 设备添加批量导入功能 by @rbtyang  @oliver-xie666
-4. 新增基础信息上报 by  @rbtyang  @zx-zx22
+4. [新增基础信息上报](https://ithings.net.cn/iThings/%E4%BA%91%E7%AB%AF%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%8D%8F%E8%AE%AE.html#物模型协议-2) by  @rbtyang  @zx-zx22
 5. 新增api权限校验 by @oliver-xie666  @lbs0019873800lbs 
 6. 修复若干bug 
 
