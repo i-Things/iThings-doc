@@ -56,6 +56,14 @@ footerWrap:
 4. [新增docker-compose一键部署](https://ithings.pages.dev/iThings/%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B.html)by @suixinio
 5. 修复若干bug 
 
+### V0.5.0(2023-05-10)
+1. 新增自定义脚本解析 by @godLei6  @oliver-xie666
+2. 网关加强安全性,需要子设备密码 by  @godLei6 
+3. 设备添加批量导入功能 by @rbtyang  @oliver-xie666
+4. 新增基础信息上报 by  @rbtyang  @zx-zx22
+5. 新增api权限校验 by @oliver-xie666  @lbs0019873800lbs 
+6. 修复若干bug 
+
 ## 贡献者
 感谢所有已经做出贡献的人!
 ### 后端
