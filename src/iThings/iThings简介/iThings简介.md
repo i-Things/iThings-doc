@@ -9,11 +9,11 @@ iThings是一个基于golang开发的轻量级云原生微服务物联网平台.
 * 易集成 -- 可以通过http,grpc,甚至直接将iThings作为包集成进自己系统
 
 git地址:   
-* 后端github地址:[https://github.com/i4de/ithings](https://github.com/i4de/ithings)
-* 后端gitee地址:[https://gitee.com/i-Things/things](https://gitee.com/i-Things/things)
-* 前端github地址:[https://github.com/i4de/iThings-admin-react](https://github.com/i4de/iThings-admin-react)
+* 后端github地址:[https://github.com/i-Things/iThings](https://github.com/i-Things/iThings)
+* 后端gitee地址:[https://gitee.com/i-Things/iThings](https://gitee.com/i-Things/iThings)
+* 前端github地址:[https://github.com/i-Things/iThings-admin-react](https://github.com/i-Things/iThings-admin-react)
 * 前端gitee地址:[https://gitee.com/i-Things/iThings-admin-react](https://gitee.com/i-Things/iThings-admin-react)
-* 同时支持单体及微服务集成二开样例:[https://github.com/i4de/iThings-demo](https://github.com/i4de/iThings-demo)
+* 同时支持单体及微服务集成二开样例:[https://github.com/i-Things/iThings-demo](https://github.com/i-Things/iThings-demo)
 ## 产品架构
 iThings物联网平台提供跨不同设备和数据源的通用接入及管理平台,在整个物联网架构中起到承上启下的中介作用，
 联动感知层及应用层之间的所有交互——向下连接、管理物联网设备端并完成感知数据的归集与存储，
@@ -69,13 +69,13 @@ iThings物联网平台提供跨不同设备和数据源的通用接入及管理�
 ## 贡献者
 感谢所有已经做出贡献的人!
 ### 后端
-<a href="https://github.com/i4de/iThings/graphs/contributors">
-  <img src="https://contributors-img.web.app/image?repo=i4de/iThings" />
+<a href="https://github.com/i-Things/iThings/graphs/contributors">
+  <img src="https://contributors-img.web.app/image?repo=i-Things/iThings" />
 </a>
 
 ### 前端
-<a href="https://github.com/i4de/iThings-admin-react/graphs/contributors">
-  <img src="https://contributors-img.web.app/image?repo=i4de/iThings-admin-react" />
+<a href="https://github.com/i-Things/iThings-admin-react/graphs/contributors">
+  <img src="https://contributors-img.web.app/image?repo=i-Things/iThings-admin-react" />
 </a>
 
 ## 社区
@@ -85,4 +85,4 @@ iThings物联网平台提供跨不同设备和数据源的通用接入及管理�
 - 微信二维码:
 - <img src="/assets/img/things/微信二维码2.jpg">
 ## 收藏
-<img src="https://starchart.cc/i4de/ithings.svg">
+<img src="https://starchart.cc/i-Things/iThings.svg">

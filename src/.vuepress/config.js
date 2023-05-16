@@ -108,23 +108,23 @@ module.exports = {
     repo: {
       platform: 'https://github.com/',
       icon: 'fab fa-github',
-      owner: 'i4de',
+      owner: 'i-Things',
       repositories: 'iThings',
     },
     editLinks: true,
     editLinkText: '编辑当前页',
     edit: {
       docsPlatform: 'https://github.com/',
-      docsRepo: 'i4de/ithings-doc',
+      docsRepo: 'i-Things/iThings-doc',
       docsBranch: 'master',
       docsDir: 'src',
     },
     footer: {
-      licensedLink: 'https://github.com/i4de/ithings/blob/master/LICENSE',
+      licensedLink: 'https://github.com/i-Things/iThings/blob/master/LICENSE',
       licensed: 'GNU',
       createYear: '2022',
       author: 'iThings',
-      authorLink: 'https://github.com/i4de/ithings',
+      authorLink: 'https://github.com/i-Things/iThings',
     }
   },
   plugins: [
