@@ -3,6 +3,11 @@
 <div class="content">
     <h3>请输入设备信息：</h3>
     <div>
+      <span for="">从设备详情json导入:</span>
+      <input type="text" id="deviceJson" name="设备一键复制json" v-model="deviceJson"></input>
+      <button type="text" v-on:click="onImportJson()">导入设备信息</button>
+    </div>
+    <div>
         <span for="">产品ID:</span>
         <input type="text" id="productid" name="productid" v-model="productid"></input>
     </div>
@@ -43,6 +48,7 @@ import CryptoJS from "../../.vuepress/public/assets/js/crypto-js.min.js";
 export default {
     data() {
         return {
+            deviceJson: "",
             productid: "",
             devicename: "",
             devicesecret: "",
@@ -55,6 +61,15 @@ export default {
     mounted () {
     },
     methods:  {
+        onImportJson(){
+          if (this.deviceJson == undefined || this.deviceJson.length == 0) {
+            return
+          }
+          let ret = JSON.parse(this.deviceJson);
+          this.productid = ret['产品ID'];
+          this.devicename = ret['设备名称'];
+          this.devicesecret = ret['密钥'];
+        },
         onSign(){
             if (this.productid === '' || this.devicename === '' || this.devicesecret === '' || this.signmethod === '') {
                 alert("必填项不能为空");
