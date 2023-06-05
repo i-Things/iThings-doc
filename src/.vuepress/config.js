@@ -31,6 +31,7 @@ module.exports = {
             '/iThings/iThings简介/iThings简介.md',
             '/iThings/iThings简介/服务设计.md',
             '/iThings/iThings简介/iThings主要流程.md',
+            '/iThings/iThings简介/更新记录.md',
             '/iThings/iThings简介/许可版本.md',
           ]
         },

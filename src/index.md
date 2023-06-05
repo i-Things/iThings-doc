@@ -29,40 +29,7 @@ footerWrap:
 
 <img src="/assets/img/things/iThings架构图.png" style="box-shadow: 20px 20px 50px grey;border-radius: 10px;"></img>
 
-## 更新日志
-### V0.0.1(2022-04-27)
-1. 完成最新版本切换
-### V0.1.0(2022-10-24)
-1. 拥有独立的管理后台
-2. 支持单体模式
-3. 接口规范化
-### V0.2.0(2022-11-24)
-1. 新增网关子设备
-2. 新增产品远程配置
-3. 物模型前端完善
-4. bug修复
-### V0.3.0(2023-02-06)
-1. 新增首页大屏统计
-2. 前端升级到最新版本umi:4.x react:18.x ant:5.0 
-3. 新增设备地图
-4. 产品支持tag
-5.  <a style="color:black;" href="/iThings/高级/消息推送.html">支持开放接口,支持basic auth,及实时消息推送</a>
-6. <a style="color:black;" href="https://github.com/i-Things/iThings-demo">新增二开案例</a> 
 
-### V0.4.0(2023-03-02)
-1. 新增操作日志,登录日志及接口记录 by @oliver-xie666  @lbs0019873800lbs 
-2. 前端界面优化 by @Huhui-coder @oliver-xie666 
-3. [支持emqx5.0](https://github.com/i-Things/iThings/pull/167) by@cooclsee
-4. [新增docker-compose一键部署](https://ithings.pages.dev/iThings/%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B.html)by @suixinio
-5. 修复若干bug 
-
-### V0.5.0(2023-05-10)
-1. [新增自定义脚本解析](https://ithings.net.cn/iThings/%E4%BA%91%E7%AB%AF%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/%E6%B6%88%E6%81%AF%E8%A7%A3%E6%9E%90.html#使用方式) by @godLei6  @oliver-xie666
-2. [网关加强安全性,需要子设备密码](https://ithings.net.cn/iThings/%E4%BA%91%E7%AB%AF%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/%E7%BD%91%E5%85%B3%E5%AD%90%E8%AE%BE%E5%A4%87.html#功能概述) by  @godLei6 
-3. 设备添加批量导入功能 by @rbtyang  @oliver-xie666
-4. [新增基础信息上报](https://ithings.net.cn/iThings/%E4%BA%91%E7%AB%AF%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/%E7%89%A9%E6%A8%A1%E5%9E%8B%E5%8D%8F%E8%AE%AE.html#物模型协议-2) by  @rbtyang  @zx-zx22
-5. 新增api权限校验 by @oliver-xie666  @lbs0019873800lbs 
-6. 修复若干bug 
 
 ## 贡献者
 感谢所有已经做出贡献的人!
@@ -80,6 +47,7 @@ footerWrap:
 - 微信(加我拉微信群): `godLei6` (需备注“来自github”)
 - QQ群(需备注“来自github”): <a href="https://jq.qq.com/?_wv=1027&k=1J4ZL7mn">776725046</a>
 - 时刻招募相信分布式办公的你
+- 参与方式: 先搭建环境并运行起iThings, 社区分配一两个简单功能开始入手
 - 微信二维码:
 - <img src="/assets/img/things/微信二维码2.jpg">
 
