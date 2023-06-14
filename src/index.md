@@ -49,7 +49,9 @@ footerWrap:
 - 时刻招募相信分布式办公的你
 - 参与方式: 先搭建环境并运行起iThings, 社区分配一两个简单功能开始入手
 - 微信二维码:
-- <img src="/assets/img/things/微信二维码2.jpg">
+- <img  width="26%" src="/assets/img/things/微信二维码2.jpg">  
+- 公众号:
+- <img src="/assets/img/things/公众号.jpg">  
 
 ## 收藏
 <img src="https://starchart.cc/i-Things/iThings.svg">

@@ -84,6 +84,8 @@ iThings物联网平台提供跨不同设备和数据源的通用接入及管理�
 - 时刻招募相信分布式办公的你
 - 参与方式: 先搭建环境并运行起iThings, 社区分配一两个简单功能开始入手
 - 微信二维码:
-- <img src="/assets/img/things/微信二维码2.jpg">
+- <img  width="35%" src="/assets/img/things/微信二维码2.jpg">  
+- 公众号:
+- <img src="/assets/img/things/公众号.jpg">  
 ## 收藏
 <img src="https://starchart.cc/i-Things/iThings.svg">
