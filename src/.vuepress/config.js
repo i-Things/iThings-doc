@@ -70,6 +70,7 @@ module.exports = {
             '/iThings/云端开发指南/设备本地日志上报.md',
             '/iThings/云端开发指南/设备远程配置.md',
             '/iThings/云端开发指南/消息解析.md',
+            '/iThings/云端开发指南/NTP时间同步.md',
           ]
         },
         {
