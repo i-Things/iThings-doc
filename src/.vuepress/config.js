@@ -64,6 +64,7 @@ module.exports = {
           collapsable: true,
           children: [
             '/iThings/云端开发指南/设备身份认证.md',
+            '/iThings/云端开发指南/设备动态注册.md',
             '/iThings/云端开发指南/password生成工具.md',
             '/iThings/云端开发指南/物模型协议.md',
             '/iThings/云端开发指南/网关子设备.md',
