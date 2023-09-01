@@ -6,7 +6,7 @@ iThings是一个基于golang开发的轻量级云原生微服务物联网平台.
 * 高性能 -- 使用golang编写,选用高性能组件(emqx,nats,tdengine),基于gozero微服务框架高性能的同时保证服务的稳定性
 * 云原生易拓展 -- 一套代码同时支持k8s,docker,微服务及单体模式部署,便于业务从单体到微服务的切换
 * 易部署 -- 一键安装所有依赖,一键运行iThings
-* 易集成 -- 可以通过http,grpc,甚至直接将iThings作为包集成进自己系统
+* 易集成 -- 可以通过http,grpc,甚至直接将iThings作为包集成进自己系统,同时支持mysql和pgsql选择无压力
 
 git地址:   
 * 后端github地址:[https://github.com/i-Things/iThings](https://github.com/i-Things/iThings)
@@ -56,7 +56,7 @@ iThings物联网平台提供跨不同设备和数据源的通用接入及管理�
 1. 微服务框架:[go-zero](https://go-zero.dev/)
 2. 高性能缓存:[redis](https://redis.io/)
 3. 高性能消息队列:[nats](https://docs.nats.io/)
-4. 关系型数据库:[mysql(请使用mariaDB或mysql5.7)](https://mariadb.com/)
+4. 关系型数据库:[mysql(请使用mariaDB或mysql5.7)](https://mariadb.com/)或pgsql
 5. 微服务注册中心(单体可不使用):etcd
 6. 云原生轻量级对象存储:[minio](https://min.io/)
 7. 开源、高性能、云原生,极简的时序数据处理平台:[tdengine](https://www.taosdata.com/)
