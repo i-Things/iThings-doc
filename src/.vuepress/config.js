@@ -20,7 +20,7 @@ module.exports = {
       { text: '使用文档', link: '/iThings/iThings简介/iThings简介.md' },
       { text: '在线体验', link: 'http://42.193.250.251:7777/' },
       {text:'接口文档',link: 'https://i-things.apifox.cn'},
-      { text: '边缘网关', link: 'https://rulex.pages.dev/' },
+      { text: '边缘网关', link: 'http://rulex.hootrhino.com' },
     ],
     sidebar: {
       '/iThings/': [
