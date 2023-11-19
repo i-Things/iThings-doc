@@ -76,10 +76,10 @@ productID: 26wrGK4KbrW
 ```json
 {
     "method": "reportInfoReply",
-    "clientToken": "PPXLSKBUPZ-444",
+    "msgToken": "PPXLSKBUPZ-444",
     "timestamp": 1687315938340,
     "code": 200,
-    "status": "成功",
+    "msg": "成功",
     "data": {
         "files": [
             {

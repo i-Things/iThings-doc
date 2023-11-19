@@ -43,7 +43,7 @@ deviceRecvTime(t4) <-  serverSendTime (t3)
 
 ```json
 {
-  "clientToken":"xxxxx",
+  "msgToken":"xxxxx",
   "method": "getNtp",
   "timestamp": 1571724098000
 
@@ -58,10 +58,10 @@ deviceRecvTime(t4) <-  serverSendTime (t3)
 ```json
 {
 	"method": "getNtpReply",
-	"clientToken": "xxxxx",
+	"msgToken": "xxxxx",
 	"timestamp": 1687764280156,
 	"code": 200,
-	"status": "成功",
+	"msg": "成功",
 	"data": {
 		"deviceSendTime": 1571724098000,
 		"serverRecvTime": 1687764280142
