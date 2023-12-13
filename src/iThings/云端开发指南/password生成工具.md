@@ -77,7 +77,7 @@ export default {
             }
             let connid = this.randomString(5);
             let expiry = Math.floor(Date.now() / 1000) + 60 * 60 * 24 * 127;
-            let clientid = this.productid + this.devicename;
+            let clientid = this.productid +'&'+ this.devicename;
             let username = clientid + ';' + '12010126' + ';' + connid + ';' + expiry;
             let token = '';
             let password = '';
