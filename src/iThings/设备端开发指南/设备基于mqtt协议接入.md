@@ -16,7 +16,7 @@ MQTT 协议支持通过设备证书和密钥签名两种方式接入物联网通
 
 ```
 username 字段的格式为：
-${productID}${deviceName};${sdkappid};${connid};${expiry}
+${productID}&${deviceName};${sdkappid};${connid};${expiry}
 注意：${} 表示变量，并非特定的拼接符号。
 ```
 
@@ -49,8 +49,8 @@ def IotHmac(productID, devicename, devicePsk):
     connid   = RandomConnid(5)
     # 2. 生成过期时间，表示签名的过期时间,从纪元1970年1月1日 00:00:00 UTC 时间至今秒数的 UTF8 字符串
     expiry   = int(time.time()) + 60 * 60
-    # 3. 生成 MQTT 的 clientid 部分, 格式为 ${productID}${devicename}
-    clientid = "{}{}".format(productID, devicename)
+    # 3. 生成 MQTT 的 clientid 部分, 格式为 ${productID}&${devicename}
+    clientid = "{}&{}".format(productID, devicename)
     # 4. 生成 MQTT 的 username 部分, 格式为 ${clientid};${sdkappid};${connid};${expiry}
     username = "{};12010126;{};{}".format(clientid, connid, expiry)
     # 5. 对 username 进行签名，生成token
@@ -109,8 +109,8 @@ public class SignForMqttTest {
         String connid = HMACSHA256.getConnectId(5);
         //2. 生成过期时间，表示签名的过期时间,从纪元1970年1月1日 00:00:00 UTC 时间至今秒数的 UTF8 字符串
         Long expiry = Calendar.getInstance().getTimeInMillis()/1000 + 600;
-        //3. 生成 MQTT 的 clientid 部分, 格式为 ${productID}${devicename}
-        String clientid = productID+devicename;
+        //3. 生成 MQTT 的 clientid 部分, 格式为 ${productID}&${devicename}
+        String clientid = productID+"&"+devicename;
         //4. 生成 MQTT 的 username 部分, 格式为 ${clientid};${sdkappid};${connid};${expiry}
         String username = clientid+";"+"12010126;"+connid+";"+expiry;
         //5.  对 username 进行签名，生成token、根据物联网通信平台规则生成 password 字段
@@ -215,8 +215,8 @@ const devicePsk = 'YOUR_PSK';
 const connid =  randomString(5);
 // 2. 生成过期时间，表示签名的过期时间,从纪元1970年1月1日 00:00:00 UTC 时间至今秒数的 UTF8 字符串
 const expiry = Math.round(new Date().getTime() / 1000) + 3600 * 24;
-// 3. 生成 MQTT 的 clientid 部分, 格式为 ${productID}${devicename}
-const clientId = productID + deviceName;
+// 3. 生成 MQTT 的 clientid 部分, 格式为 ${productID}&${devicename}
+const clientId = productID +'&'+ deviceName;
 // 4. 生成 MQTT 的 username 部分, 格式为 ${clientid};${sdkappid};${connid};${expiry}
 const userName = `${clientId};12010126;${connid};${expiry}`;
 //5.  对 username 进行签名，生成token、根据物联网通信平台规则生成 password 字段
@@ -325,7 +325,7 @@ int main(int argc, char **argv)
     }
 
     // 20 for timestampe length & delimiter
-    username_len = strlen(product_id) + strlen(device_name) + QCLOUD_IOT_DEVICE_SDK_APPID_LEN + MAX_CONN_ID_LEN + 20;
+    username_len = strlen(product_id) + strlen(device_name) + QCLOUD_IOT_DEVICE_SDK_APPID_LEN + MAX_CONN_ID_LEN + 20+1;
     username     = (char *)HAL_Malloc(username_len);
     if (username == NULL) {
         HAL_Printf("malloc username failed!\r\n");
@@ -333,7 +333,7 @@ int main(int argc, char **argv)
     }
 
     get_next_conn_id(conn_id);
-    HAL_Snprintf(username, username_len, "%s%s;%s;%s;%ld", product_id, device_name, QCLOUD_IOT_DEVICE_SDK_APPID,
+    HAL_Snprintf(username, username_len, "%s&%s;%s;%s;%ld", product_id, device_name, QCLOUD_IOT_DEVICE_SDK_APPID,
                  conn_id, cur_timestamp);
 
     /* third use psk_base64decode hamc_sha1 calc mqtt username sign crate mqtt
